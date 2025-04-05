@@ -1,0 +1,21 @@
+[project]
+name = "ai-thesis-reviewer"
+version = "0.1.0"
+description = "Application that provides direct constructive feedback on academic writing drafts"
+authors = [
+    {name = "Reinier van der Leer",email = "github@pwuts.nl"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.4"
+pyright = "^1.1.398"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
