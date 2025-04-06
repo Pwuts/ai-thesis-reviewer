@@ -2,10 +2,8 @@
 name = "ai-thesis-reviewer"
 version = "0.1.0"
 description = "Application that provides direct constructive feedback on academic writing drafts"
-authors = [
-    {name = "Reinier van der Leer",email = "github@pwuts.nl"}
-]
-license = {text = "MIT"}
+authors = [{ name = "Reinier van der Leer", email = "github@pwuts.nl" }]
+license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.10"
 dynamic = ["dependencies"]
@@ -13,9 +11,33 @@ dynamic = ["dependencies"]
 [tool.poetry]
 
 [tool.poetry.group.dev.dependencies]
-ruff = "^0.11.4"
 pyright = "^1.1.398"
+ruff = "^0.11.4"
+
+
+[tool.poetry.dependencies]
+anthropic = "^0.49.0"
+click = "^8.1.8"
+dotenv = "^0.9.9"
+gradio = "^5.23.3"
+pymupdf = "^1.25.5"
+pymupdf4llm = "^0.0.20"
+pydantic = "^2.11.2"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py310"
+
+[tool.ruff.lint]
+# Enable isort rules
+select = ["E", "F", "I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false

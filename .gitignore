@@ -1,3 +1,8 @@
+# Ecosystem
 __pycache__/
 .venv/
+.gradio/
 .env*
+
+# Application-specific
+debug_images/
