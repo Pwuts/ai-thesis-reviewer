@@ -4,10 +4,12 @@ from typing import Literal, Optional, overload
 import pymupdf  # type: ignore
 import pymupdf4llm  # type: ignore
 
+PDFInput = str | Path | pymupdf.Document
+
 
 @overload
 def pdf_to_markdown(
-    pdf: str | Path | pymupdf.Document,
+    pdf: PDFInput,
     page_chunks: Literal[True],
     pages: Optional[list[int]] = None,
 ) -> list[str]: ...
@@ -15,14 +17,14 @@ def pdf_to_markdown(
 
 @overload
 def pdf_to_markdown(
-    pdf: str | Path | pymupdf.Document,
+    pdf: PDFInput,
     page_chunks: Literal[False] = False,
     pages: Optional[list[int]] = None,
 ) -> str: ...
 
 
 def pdf_to_markdown(
-    pdf: str | Path | pymupdf.Document,
+    pdf: PDFInput,
     page_chunks: bool = False,
     pages: Optional[list[int]] = None,
 ) -> str | list[str]:
