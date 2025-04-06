@@ -52,21 +52,21 @@ def main():
                     usage_output = gr.Markdown()
 
         with gr.Tab("Follow-up Discussion"):
-            with gr.Row():
-                with gr.Column(scale=2):
+            with gr.Row(equal_height=True, height="85vh"):
+                with gr.Column(scale=3):
                     feedback_output_2 = gr.Markdown(
                         label="Feedback",
-                        height="80vh",
+                        height="85vh",
                         value="👆🏼 Let me review your document first before we discuss it",
                     )
 
-                with gr.Column(scale=3):
+                with gr.Column(scale=4):
                     gr.Markdown("# Discuss Your Feedback")
                     gr.Markdown(
                         "After reviewing the initial feedback, you can ask questions and discuss improvements here."
                     )
 
-                    chatbot = gr.Chatbot(type="messages", height=500, min_height="66vh")
+                    chatbot = gr.Chatbot(type="messages", height="64vh")
                     user_msg = gr.Textbox(
                         label="Ask a question about your document or the feedback"
                     )

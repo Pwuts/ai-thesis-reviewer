@@ -2,6 +2,7 @@ Born at the [EBL](https://french-acc.github.io/ebl/) [Delft Hackathon](https://l
 
 - [x] Basic review mechanism
 - [x] Chat function for further discussion & clarification
+- [ ] Make rubric loader more robust (optimize for tables)
 - [ ] Verify & tune output based on real-life reference data
 - [ ] Add full image-based mode (more expensive but better)
 - [ ] Optimize costs
