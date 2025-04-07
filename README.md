@@ -10,3 +10,4 @@ Born at the [EBL](https://french-acc.github.io/ebl/) [Delft Hackathon](https://l
     - [x] Robust ToC extractor
     - [ ] Increase specificity of feedback points
     - [ ] Add mechanism to let assistant retrieve specific pages or chapters if needed for further discussion
+- [ ] Come up with a better name than "AI Thesis Reviewer"
